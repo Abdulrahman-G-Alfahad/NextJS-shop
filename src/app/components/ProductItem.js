@@ -2,12 +2,6 @@ import Image from "next/image";
 import products from "../products";
 
 function ProductItem() {
-  //   const productList = products.map((product) => {
-  //     return (
-
-  //     );
-  //   });
-
   return (
     <div
       key={products[0].name}
@@ -26,6 +20,3 @@ function ProductItem() {
 }
 
 export default ProductItem;
-{
-  /* <div className="grid grid-cols-3 gap-4">{productList}</div>; */
-}

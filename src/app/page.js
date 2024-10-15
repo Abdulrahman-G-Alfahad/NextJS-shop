@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bookShopImage from "../../src/images/bookshopimage.jpg";
 import ProductItem from "./components/ProductItem";
+import ProductList from "./components/ProductList";
 
 export default function Home() {
   //TASK 2
@@ -72,8 +73,10 @@ export default function Home() {
       <Image src={bookShopImage}></Image>
       <br></br>
       <br></br>
-      <ProductItem />
-      <div className="grid grid-cols-3 gap-4"></div>
+
+      <div className="grid grid-cols-3 gap-4">
+        <ProductList />
+      </div>
       <br></br>
     </div>
   );
