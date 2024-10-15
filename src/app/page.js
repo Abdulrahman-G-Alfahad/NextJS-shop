@@ -73,7 +73,6 @@ export default function Home() {
       <Image src={bookShopImage}></Image>
       <br></br>
       <br></br>
-
       <div className="grid grid-cols-3 gap-4">
         <ProductList />
       </div>

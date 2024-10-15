@@ -1,20 +1,19 @@
 import Image from "next/image";
-import products from "../products";
 
-function ProductItem() {
+function ProductItem({ product }) {
   return (
     <div
-      key={products[0].name}
+      key={product.name}
       className="flex flex-col items-center border border-gray-300 rounded-lg p-4 shadow-lg"
     >
       <Image
-        src={products[0].imageSrc}
-        alt={products[0].name}
+        src={product.imageSrc}
+        alt={product.name}
         width={200}
         height={200}
       />
-      <p>{products[0].name}</p>
-      <p>{products[0].price}</p>
+      <p>{product.name}</p>
+      <p>{product.price}</p>
     </div>
   );
 }
