@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 import bookShopImage from "../../src/images/bookshopimage.jpg";
-import ProductItem from "./components/ProductItem";
 import ProductList from "./components/ProductList";
 
 export default function Home() {
@@ -62,14 +63,28 @@ export default function Home() {
   //     </div>
   //   );
   // });
+  const [visitors, setVisitors] = useState(0);
+
+  function handleOnClick() {
+    setVisitors(visitors + 1);
+  }
 
   return (
     <div className="text-center">
-      <br></br>
-      <h1 className="text-5xl"> Awesome Bookshop </h1>
-      <br></br>
-      <h2 className="text-2xl"> Where you can find all of the awesome books</h2>
-      <br></br>
+      <header>
+        <br></br>
+        <h1 className="text-5xl"> Awesome Bookshop </h1>
+        <br></br>
+        <h2 className="text-2xl">
+          {" "}
+          Where you can find all of the awesome books
+        </h2>
+        <br></br>
+        <div>
+          {visitors}
+          <button onClick={handleOnClick}>Visited</button>
+        </div>
+      </header>
       <Image src={bookShopImage}></Image>
       <br></br>
       <br></br>
